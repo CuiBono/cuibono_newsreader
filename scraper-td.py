@@ -84,4 +84,4 @@ if __name__ == "__main__":
      #   print i
       #  print "---------"
        # print fields[i]		
-   # print '\n'.join(fields)
+    print '\n'.join(fields)
