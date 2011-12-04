@@ -16,7 +16,8 @@ if __name__ == "__main__":
     )
     
     date_tags = set(
-        ["
+        ["entry-meta"]
+    )
     
     body_tags = set(
         ["entry-content"]
@@ -30,6 +31,7 @@ if __name__ == "__main__":
     # HEADLINE , BODY, TRANSCRIPT
     headline = []
     body     = []
+    date    = []
     transcript      = []    
     for div in divs:
         classes = set()
@@ -56,6 +58,8 @@ if __name__ == "__main__":
             if c in headline_tags:
                 headline.append(data)
                 print data
+            elif c in date_tags:
+                date.append(data)
             elif c in body_tags:
                 body.append(data)
             elif c in transcript_tags:
@@ -66,6 +70,7 @@ if __name__ == "__main__":
 
     h = ''.join(headline)
     b = ''.join(body)
+    d = ''.join(date)
     t = ''.join(transcript)
     fields = [h, b, t]
     
